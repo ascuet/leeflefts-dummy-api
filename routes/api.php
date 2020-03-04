@@ -19,7 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::prefix('v1')->group(function () {
-    Route::get('users', function () {
-        return response()->json(['name'=>'Anik Sen']);
-    });
+    Route::get('team', 'api\TeamController@getAll');
 });
